@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Advanced To-Do List</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Advanced To-Do List</h1>
+
+    <div class="theme-selector">
+      <label for="themeSelect">Choose Theme: </label>
+      <select id="themeSelect">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+        <option value="blue">Blue</option>
+      </select>
+    </div>
+
+    <form id="taskForm">
+      <input type="text" id="taskInput" placeholder="Add new task..." required />
+      <input type="date" id="dueDate" />
+      <button type="submit" id="addTaskBtn">Add Task</button>
+    </form>
+
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

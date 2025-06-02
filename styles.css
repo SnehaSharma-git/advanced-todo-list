@@ -1,0 +1,169 @@
+:root {
+    --bg-light: #f7f7f7;
+    --text-light: #333;
+    --bg-dark: #121212;
+    --text-dark: #eee;
+    --bg-blue: #e6f0ff;
+    --text-blue: #003366;
+  }
+  
+  body.light {
+    background-color: var(--bg-light);
+    color: var(--text-light);
+  }
+  
+  body.dark {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+  }
+  
+  body.blue {
+    background-color: var(--bg-blue);
+    color: var(--text-blue);
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .theme-selector {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  select {
+    padding: 5px 10px;
+    font-size: 16px;
+  }
+  
+  #taskForm {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  #taskInput {
+    flex-grow: 2;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  #dueDate {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  #addTaskBtn {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  ul#taskList {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  li.task-item {
+    background: #eee;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    position: relative;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  li.task-item.completed > .task-header > .task-title {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
+  .task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .task-title {
+    flex-grow: 1;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .due-date {
+    font-size: 14px;
+    color: #555;
+    white-space: nowrap;
+  }
+  
+  .due-date.overdue {
+    color: red;
+    font-weight: bold;
+  }
+  
+  button.delete-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #900;
+  }
+  
+  /* Checklist styles */
+  ul.checklist {
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+  
+  ul.checklist li {
+    background: #ddd;
+    margin: 5px 0;
+    padding: 5px 8px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  ul.checklist li.completed {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
+  .add-subtask-container {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .add-subtask-container input[type="text"] {
+    flex-grow: 1;
+    padding: 6px 10px;
+  }
+  
+  .add-subtask-container button {
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+  
